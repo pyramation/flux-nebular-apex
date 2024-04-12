@@ -21,10 +21,9 @@
   },
   "scripts": {
     "copy": "copyfiles -f ../../LICENSE README.md package.json dist",
-    "prepublishOnly": "npm run copy",
     "prepare": "npm run build",
     "clean": "del dist/**",
-    "build": "npm run clean; tsc; tsc -p tsconfig.esm.json",
+    "build": "npm run clean; tsc; tsc -p tsconfig.esm.json; npm run copy",
     "test": "jest",
     "test:watch": "jest --watch"
   },
