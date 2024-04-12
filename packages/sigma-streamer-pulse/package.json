@@ -1,0 +1,31 @@
+{
+  "name": "sigma-streamer-pulse",
+  "version": "0.0.1",
+  "author": "Dan Lynch <pyramation@gmail.com>",
+  "description": "streamin",
+  "main": "index.js",
+  "module": "esm/index.js",
+  "types": "index.d.ts",
+  "homepage": "https://github.com/pyramation/flux-nebular-apex",
+  "license": "SEE LICENSE IN LICENSE",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyramation/flux-nebular-apex"
+  },
+  "bugs": {
+    "url": "https://github.com/pyramation/flux-nebular-apex/issues"
+  },
+  "scripts": {
+    "copy": "copyfiles -f ../../LICENSE README.md package.json dist",
+    "prepublishOnly": "npm run copy",
+    "clean": "del dist/**",
+    "build": "npm run clean; tsc; tsc -p tsconfig.esm.json",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": []
+}
